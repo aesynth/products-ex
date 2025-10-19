@@ -1,0 +1,113 @@
+<div class="scrolling-carousel">
+  <div class="scrolling-wrapper">
+    <span>Doctor recommended</span>
+    <span>Free shipping on all orders</span>
+    <span>Clinically proven ingredients</span>
+    <span>All-in-one treatment</span>
+    <span>3rd-party tested</span>
+    <!-- Duplicate for seamless infinite scroll -->
+    <span>Doctor recommended</span>
+    <span>Free shipping on all orders</span>
+    <span>Clinically proven ingredients</span>
+    <span>All-in-one treatment</span>
+    <span>3rd-party tested</span>
+  </div>
+</div>
+
+<style>
+.scrolling-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #f8f9fb;
+  border-radius: 12px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.scrolling-wrapper {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+.scrolling-wrapper span {
+  display: inline-block;
+  margin: 0 50px;
+  font-weight: 600;
+  color: #0f1724;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<div class="product-widget">
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x250/cccccc/888888?text=Product+1" alt="Product 1">
+    <button class="btn">View Product 1</button>
+  </div>
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x250/cccccc/888888?text=Product+2" alt="Product 2">
+    <button class="btn">View Product 2</button>
+  </div>
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200x250/cccccc/888888?text=Product+3" alt="Product 3">
+    <button class="btn">View Product 3</button>
+  </div>
+</div>
+
+<style>
+.product-widget {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.product-card {
+  background: #f9f9fb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 200px;
+  height: 250px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0f62fe, #7c3aed);
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #7c3aed, #0f62fe);
+  transform: scale(1.05);
+}
+</style>
